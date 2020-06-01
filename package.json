@@ -1,0 +1,27 @@
+{
+  "name": "netclicks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "babel src -d lib --presets es2015"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eKliman/netclicks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eKliman/netclicks/issues"
+  },
+  "homepage": "https://github.com/eKliman/netclicks#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

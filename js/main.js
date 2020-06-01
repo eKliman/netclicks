@@ -37,47 +37,52 @@ const DBService = class {
     }
   }
 
-  getTestData = () => {
+  getTestData() {
     return this.getData('test.json');
-  };
+  }
 
-  getTestCard = () => {
+  getTestCard() {
     return this.getData('card.json');
-  };
+  }
 
-  getSearchResult = (query) => {
+  getSearchResult(query) {
     this.temp = `${this.SERVER}/search/tv?api_key=${this.API_KEY}&language=ru-RU&query=${query}`;
     return this.getData(this.temp);
-  };
+  }
 
-  getNextPage = (page) => {
+  getNextPage(page) {
     return this.getData(this.temp + '&page=' + page);
-  };
+  }
 
-  getTvShow = (id) =>
+  getTvShow(id) {
     this.getData(
       this.SERVER + '/tv/' + id + '?api_key=' + this.API_KEY + '&language=ru-RU'
     );
+  }
 
-  getTopRated = () =>
+  getTopRated() {
     this.getData(
       `${this.SERVER}/tv/top_rated?api_key=${this.API_KEY}&language=ru-RU`
     );
+  }
 
-  getPopular = () =>
+  getPopular() {
     this.getData(
       `${this.SERVER}/tv/popular?api_key=${this.API_KEY}&language=ru-RU`
     );
+  }
 
-  getToday = () =>
+  getToday() {
     this.getData(
       `${this.SERVER}/tv/airing_today?api_key=${this.API_KEY}&language=ru-RU`
     );
+  }
 
-  getWeek = () =>
+  getWeek() {
     this.getData(
       `${this.SERVER}/tv/on_the_air?api_key=${this.API_KEY}&language=ru-RU`
     );
+  }
 };
 
 const dbservice = new DBService();
